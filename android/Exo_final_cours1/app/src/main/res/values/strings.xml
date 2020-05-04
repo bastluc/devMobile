@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Exo_final_cours1</string>
+    <string name="title_home">Tâches</string>
+    <string name="title_dashboard">Ajouter une tâche</string>
+    <string name="title_notifications">Calendrier</string>
+    <string name="add_task_title">Ajouter une tâche</string>
+</resources>
