@@ -1,17 +1,19 @@
 import React from 'react';
 import {StyleSheet, View, Text, TextInput} from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
-import FILMS from './global';
+import { Logs } from 'expo';
 
 export default class AddFilm extends React.Component {
 
     state = {
-        films : FILMS,
         title : ""
     }
 
     addFilm(){
-        
+        this.props.route.params.addFilm({
+            title: this.state.title
+        })
+        this.setState({title: ""})
     }
 
     render(){

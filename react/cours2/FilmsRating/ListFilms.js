@@ -1,21 +1,20 @@
 import React from 'react'
 import {StyleSheet, View, Text, ScrollView} from 'react-native'
-import FILMS from './global'
 
 export default class ListFilms extends React.Component {
 
-    
-
-    state = {
-        films: FILMS
+    constructor(props){
+        super(props);
     }
 
     render(){
+        let films = this.props.route.params.films();
+        
         return(
             <View style={styles.container}>
                 <ScrollView style={styles.container}>
                     {
-                        this.state.films.map((film, index) => (
+                        films.map((film, index) => (
                         <Text key={index}>{film.title}</Text>
                         ))
                     }
