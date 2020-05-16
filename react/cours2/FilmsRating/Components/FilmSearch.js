@@ -47,7 +47,7 @@ class FilmSearch extends React.Component {
         return(
             <View style={styles.container}>
                 <View style={styles.searchContainer}>
-                    <TextInput style={styles.input} value={this.state.searchText} onChangeText={(text) => this.setState({searchText: text})} placeholder={"Rechercher..."} />
+                    <TextInput clearButtonMode={"always"} style={styles.input} value={this.state.searchText} onChangeText={(text) => this.setState({searchText: text})} placeholder={"Rechercher..."} />
                 </View>
                 <View style={styles.resultsContainer}>
                     <ScrollView>
@@ -110,6 +110,10 @@ const styles = StyleSheet.create({
         alignItems: "center",
         paddingLeft: 10,
         paddingRight: 10
+    },
+    title: {
+        fontSize: 17,
+        fontWeight: "bold"
     }
 })
 
