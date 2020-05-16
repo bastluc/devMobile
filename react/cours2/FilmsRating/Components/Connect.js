@@ -46,12 +46,12 @@ export default class Connect extends React.Component {
     render(){
         return(
             <View style={styles.container}>
-                <ImageBackground source={require('./assets/background.jpg')} style={styles.image}>
+                <ImageBackground source={require('../assets/background.jpg')} style={styles.image}>
                     <View style={styles.formContainer}>
                         <Text style={styles.title}>Movie Ratings</Text>
-                        <TextInput keyboardType='numeric' style={styles.textInput} placeholderTextColor = "#fff" placeholder={"Identifiant"} onChangeText={(text) => this._setId(text)} />
+                        <TextInput style={styles.textInput} placeholderTextColor = "#fff" placeholder={"Identifiant"} onChangeText={(text) => this._setId(text)} />
                         <TextInput style={styles.textInput} placeholderTextColor = "#fff" secureTextEntry={true} placeholder={"Mot de passe"} onChangeText={(text) => this._setPwd(text)} />
-                        <TouchableOpacity style={styles.button} disabled={!this.state.validForm} onPress={() => {this.connect()}}>
+                        <TouchableOpacity style={styles.button} onPress={() => {this.connect()}}>
                             <Text>Connexion</Text>
                         </TouchableOpacity>
                     </View>

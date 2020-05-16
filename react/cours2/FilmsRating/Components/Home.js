@@ -13,22 +13,6 @@ export default class Home extends React.Component {
 
     constructor(props){
         super(props);
-        this.state = {
-            films : [
-              {
-                title: "Le dîner de cons"
-              }
-            ]
-        }
-    }
-
-    addFilm(film){
-        this.setState({films : this.state.films.push(film)});
-        console.warn(this.state.films)
-    }
-
-    getFilms(){
-        return this.state.films;
     }
 
     render(){
@@ -61,9 +45,9 @@ export default class Home extends React.Component {
                 inactiveTintColor: '#2A2A2A',
               }}
               >
-                <Tab.Screen name="Films" component={ListFilms} initialParams={{ films: this.getFilms.bind(this) }} />
-                <Tab.Screen name="Ajouter" component={AddFilm} initialParams={{ addFilm: this.addFilm.bind(this) }} />
-                <Tab.Screen name="Rechercher" component={FilmSearch} initialParams={{ films: this.state.films }} />
+                <Tab.Screen name="Films" component={ListFilms} />
+                <Tab.Screen name="Ajouter" component={AddFilm} />
+                <Tab.Screen name="Rechercher" component={FilmSearch} />
                 <Tab.Screen name="Paramètres" component={Settings} />
             </Tab.Navigator>
         );
