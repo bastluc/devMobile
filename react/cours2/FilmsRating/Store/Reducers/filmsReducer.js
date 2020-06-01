@@ -9,6 +9,7 @@ function addFilm(state = initialState, action) {
                 ...state,
                 films: [...state.films, action.value]
             }
+            
             return nextState || state
         default:
             return state
